@@ -93,13 +93,6 @@ python blackjack_strategy_comparison.py
 
 The script will generate CSV outputs and plots in the project output folder.
 
-Project Structure
-
-blackjack-strategy-comparison/
-├── blackjack_strategy_comparison.py
-├── requirements.txt
-├── README.md
-└── outputs/
 
 Reproducibility
 
