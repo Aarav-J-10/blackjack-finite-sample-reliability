@@ -1,0 +1,15 @@
+test,status,evidence
+Finite-shoe card counts,PASS,"{2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 4, 8: 4, 9: 4, 10: 16, 11: 4}"
+Shuffle penetration threshold,PASS,Six-deck 75% penetration leaves 78 cards
+Soft-total handling,PASS,"A,6,10 evaluates to 17, soft=False"
+Soft 17 recognition,PASS,"A,6 evaluates to 17, soft=True"
+Blackjack payout logic,PASS,3:2=1.5 units and 6:5=1.2 units
+Dealer S17/H17 switch,PASS,Both rule states configured and simulated
+Split-aces restriction,PASS,Baseline allows one card after splitting aces and prohibits resplitting aces
+Resplitting switch,PASS,Allowed and prohibited configurations executed
+Double-after-split restriction,PASS,Baseline DAS enabled; action requires a two-card hand
+Push/loss/win settlement,PASS,"Loss=-1, push=0, win=+1 before wager multipliers"
+Total wager accounting,PASS,Double and split hands settle using their stored bet units
+Deterministic reproducibility,PASS,Repeated seeded runs matched exactly
+Corrected-result plausibility,PASS,"At n=50000, Basic=-0.496%, Simplified=-6.078%"
+Paired variance reduction,PASS,Median reduction=19.6%

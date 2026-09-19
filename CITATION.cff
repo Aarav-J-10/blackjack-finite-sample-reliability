@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the accompanying manuscript."
+title: "Finite-Sample Misranking in Stochastic Decision Systems"
+type: software
+authors:
+  - family-names: Jalan
+    given-names: Aarav
+version: 1.0.0
+date-released: 2026-09-19
+

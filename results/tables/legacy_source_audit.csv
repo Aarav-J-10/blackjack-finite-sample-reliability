@@ -1,0 +1,5 @@
+check,status,observed,expected,interpretation
+Declared six-deck shoe size,ISSUE FOUND,78,312,"The supplied data never begins a round with more than 78 cards, although six decks require 312 cards."
+Shoe persistence across rounds,ISSUE FOUND,5000,"Far fewer than 5,000 shoes for 5,000 rounds","The shoe identifier changes on every recorded round, so 75% penetration was not implemented in the supplied run."
+Notebook base-deck construction,ISSUE FOUND,13 rank entries multiplied by NUM_DECKS,"52 cards per physical deck, including four copies of each rank","The original notebook creates 78 cards for six decks while setting the cut-card threshold to 78, forcing a reshuffle before every round."
+Corrected engine base deck,CORRECTED,52,52,The upgraded computation uses four cards of ranks 2-9 and Ace plus sixteen ten-valued cards per deck.

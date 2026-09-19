@@ -1,0 +1,83 @@
+{
+  "mode": "full",
+  "master_seed": 20260904,
+  "sample_sizes": [
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2500,
+    5000,
+    10000,
+    25000,
+    50000
+  ],
+  "direct_blackjack_sample_sizes": [
+    25,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2500
+  ],
+  "large_n_blackjack_method": "paired bootstrap aggregation of independent 2,500-round finite-shoe blocks",
+  "primary_replications": 10000,
+  "sensitivity_replications": 500,
+  "strategy_replications": 1000,
+  "sensitivity_rounds": 2500,
+  "strategy_rounds": 2500,
+  "bootstrap_resamples": 1000,
+  "blackjack_config": {
+    "decks": 6,
+    "penetration": 0.75,
+    "dealer_hits_soft_17": false,
+    "blackjack_payout": 1.5,
+    "surrender_allowed": false,
+    "allow_resplit": true,
+    "resplit_aces": false,
+    "maximum_splits": 3,
+    "double_after_split": true
+  },
+  "inventory_model": {
+    "demand_distribution": "Poisson(mean=20 units per period)",
+    "sale_price": 12.0,
+    "purchase_cost": 7.0,
+    "salvage_value": 2.0,
+    "shortage_penalty": 4.0,
+    "optimized_order": 21,
+    "naive_order": 20
+  },
+  "queue_model": {
+    "queue_lengths": "Independent Poisson(mean=3) jobs at two servers",
+    "server_1_completion_probability_per_slot": 0.55,
+    "server_2_completion_probability_per_slot": 0.4,
+    "strong_rule": "Join the shorter queue; ties use the faster server",
+    "weak_rule": "Random server assignment",
+    "reference_scenarios": 1000000,
+    "discrete_joint_categories": 1107
+  },
+  "diagnostics": {
+    "long_run_mean_difference_pct": 5.582893243243243,
+    "paired_effective_per_round_sd_pct": 135.90874819239386,
+    "unpaired_effective_per_round_sd_pct": 151.27584428984875,
+    "paired_asymptotic_standardized_effect": 0.041078247850094535,
+    "unpaired_asymptotic_standardized_effect": 0.03690538479194513,
+    "one_round_mean_difference_pct": 5.962,
+    "one_round_sd_difference_pct": 86.7428948058456,
+    "one_round_third_absolute_central_moment": 1594587.8494459405,
+    "berry_esseen_constant": 0.4748,
+    "hoeffding_theoretical_range": [
+      -9.5,
+      9.0
+    ]
+  },
+  "source_files": [
+    "paper/PFME_manuscript.pdf",
+    "data/legacy/blackjack_5000_hand_complete_dataset.xlsx",
+    "data/legacy/blackjack_round_level_data.csv",
+    "data/legacy/blackjack_replication_original.py"
+  ]
+}

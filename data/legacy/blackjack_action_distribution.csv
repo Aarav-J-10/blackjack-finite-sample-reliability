@@ -1,0 +1,9 @@
+strategy,action,count
+Basic,blackjack_check,213
+Basic,double,260
+Basic,hit,1441
+Basic,stand,1560
+Basic,stand_after_split_aces,38
+Simplified,blackjack_check,229
+Simplified,hit,765
+Simplified,stand,2181

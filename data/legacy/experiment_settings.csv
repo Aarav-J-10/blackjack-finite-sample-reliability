@@ -1,0 +1,15 @@
+parameter,value
+random_seed,20260622
+total_rounds,5000
+block_size,100
+number_of_blocks,50
+rounds_per_strategy,2500
+number_of_decks,6
+penetration,0.75
+dealer_soft_17_rule,stand
+blackjack_payout,1.5
+maximum_splits,3
+double_after_split,True
+resplit_aces,False
+surrender,False
+initial_bet_units,1
